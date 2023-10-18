@@ -24,6 +24,7 @@ public class ScoreAppService : IScoreAppService
             var model = _mapper.Map<ScoreSystemModel>(scoreRecord);
             model.User = input.User;
             model.RecordId = input.RecordId;
+            model.Title = input.Title;
             model.CreateTime = DateTime.Now;
             await _scoreSystem.AddRecordAsync(model);
         }

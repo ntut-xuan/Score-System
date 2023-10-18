@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ScoreSystem.EFCore;
 
@@ -10,9 +11,11 @@ using ScoreSystem.EFCore;
 namespace ScoreSystem.EFCore.Migrations
 {
     [DbContext(typeof(EFScoreSystemDbContext))]
-    partial class EFScoreSystemDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231018205901_AddTitle")]
+    partial class AddTitle
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.12");

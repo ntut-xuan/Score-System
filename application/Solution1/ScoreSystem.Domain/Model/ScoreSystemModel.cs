@@ -4,6 +4,7 @@ public class ScoreSystemModel
 {
     public string User { get; set; }
     public Guid RecordId { get; set; }
+    public string Title { get; set; }
     public string Suite { get; set; }
     public int Passed { get; set; }
     public int Failed { get; set; }

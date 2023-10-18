@@ -26,6 +26,7 @@ public class EFScoreSystemDbContext : DbContext
 public class ScoreRecord
 {
     public string User { get; set; }
+    public string Title { get; set; }
     public Guid RecordId { get; set; }
     public string Suite { get; set; }
     public int Passed { get; set; }
