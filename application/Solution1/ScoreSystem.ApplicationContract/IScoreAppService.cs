@@ -2,5 +2,5 @@ namespace ScoreSystem.ApplicationContract;
 
 public interface IScoreAppService
 {
-    Task AddAsync(ScoreRecordInput input, CancellationToken cancellationToken = default);
+    Task AddAsync(ScoreInput input, CancellationToken cancellationToken = default);
 }

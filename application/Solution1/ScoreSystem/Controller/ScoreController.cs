@@ -13,7 +13,7 @@ public class ScoreController : ControllerBase
     }
     
     [HttpPost("/api/v1/submit")]
-    public async Task<IActionResult> Submit([FromBody] ScoreRecordInput input, CancellationToken cancellationToken)
+    public async Task<IActionResult> Submit([FromBody] ScoreInput input, CancellationToken cancellationToken)
     {
         await _scoreAppService.AddAsync(input, cancellationToken);
         return Ok();

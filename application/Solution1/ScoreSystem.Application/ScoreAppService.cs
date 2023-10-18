@@ -17,8 +17,15 @@ public class ScoreAppService : IScoreAppService
         _mapper = mapper;
     }
 
-    public async Task AddAsync(ScoreRecordInput input, CancellationToken cancellationToken = default)
+    public async Task AddAsync(ScoreInput input, CancellationToken cancellationToken = default)
     {
-        await _scoreSystem.AddRecordAsync(_mapper.Map<ScoreSystemModel>(input));
+        foreach (var scoreRecord in input.Scores)
+        {
+            var model = _mapper.Map<ScoreSystemModel>(scoreRecord);
+            model.User = input.User;
+            model.RecordId = input.RecordId;
+            model.CreateTime = DateTime.Now;
+            await _scoreSystem.AddRecordAsync(model);
+        }
     }
 }
