@@ -1,11 +1,13 @@
 using AutoMapper;
 using Microsoft.Extensions.DependencyInjection;
+using RazorLight;
+using RazorLight.Extensions;
 using ScoreSystem.Application;
 using ScoreSystem.ApplicationContract;
 using ScoreSystem.Domain.MappingProfiles;
 using ScoreSystem.EFCore;
 
-namespace ScoreSystem.Domin;
+namespace ScoreSystem.Application;
 
 public static class StartUp
 {

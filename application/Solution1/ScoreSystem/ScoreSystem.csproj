@@ -12,15 +12,31 @@
 
     <ItemGroup>
       <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+      <PackageReference Include="Cassette" Version="2.4.2" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.12">
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         <PrivateAssets>all</PrivateAssets>
       </PackageReference>
       <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.12" />
+      <PackageReference Include="RazorLight" Version="2.3.1" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\ScoreSystem.Application\ScoreSystem.Application.csproj" />
     </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Include="Template\ClientSide.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="Static\style.css">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+    <PropertyGroup>
+        <PreserveCompilationContext>true</PreserveCompilationContext>
+    </PropertyGroup>
 
 </Project>
